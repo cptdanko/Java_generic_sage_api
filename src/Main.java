@@ -3,6 +3,7 @@ import com.bhuman.exm.api.SageImpl;
 import com.bhuman.exm.models.Credentials;
 import com.bhuman.exm.models.JournalEntry;
 import com.bhuman.exm.util.Constants;
+import com.bhuman.exm.util.SageEndpoint;
 
 public class Main {
 
@@ -13,7 +14,8 @@ public class Main {
 		SageImpl crudImpl = (SageImpl) APIFactory.factory.getCrudAPI(Constants.sageFactoryKey);
 
 		Credentials cred = sageAuth.authenticate();
-
+		
+		String urlStr = SageEndpoint.POST_JOURNAL_ENTRY.urlString();
 		JournalEntry entry = new JournalEntry();
 		try {
 			crudImpl.create(entry, cred.getSessionId());

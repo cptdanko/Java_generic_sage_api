@@ -5,7 +5,6 @@ package com.bhuman.exm.api;
  * methods to authenticate, post and retrieve 
  * journal entries
  */
-public interface API<T> {
-	
+public interface API<T> {	
 	public T authenticate();	
 }
