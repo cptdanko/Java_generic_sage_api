@@ -1,4 +1,4 @@
-# Sage API consumption for EX-M
+# Sage API consumption
 
 This project provides an outline i.e. a structure for how to consume Sage API.
 
